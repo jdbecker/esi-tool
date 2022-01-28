@@ -39,6 +39,8 @@ pip install -r requirements.txt
 export FLASK_APP=app.py
 ```
 
+5. Download the SDE sqlite file from https://www.fuzzwork.co.uk/dump/sqlite-latest.sqlite.bz2 and extract to root of this project
+
 
 ## Create your app in https://developers.eveonline.com
 
