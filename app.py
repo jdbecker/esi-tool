@@ -31,6 +31,8 @@ import logging
 import random
 import time
 
+from models.sde import Sde
+
 # logger stuff
 logger = logging.getLogger(__name__)
 formatter = logging.Formatter(
@@ -237,9 +239,11 @@ def index():
         )
         wallet = esiclient.request(op)
 
-    return render_template('base.html', **{
+    context = {
         'wallet': wallet,
-    })
+        'regions': Sde.get_regions()
+    }
+    return render_template('base.html', **context)
 
 
 if __name__ == '__main__':
